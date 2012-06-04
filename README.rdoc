@@ -1,0 +1,31 @@
+= YourWay
+
+A simple Sinatra template for basic applications to be deployed to Heroku
+
+== Description
+
+This application covers some of the basic functionality needed for a small web application using Sinatra, explicitly designed to function on Heroku. It should serve as a basic template for whatever web applications you may want to build by providing:
+* A small Sinatra application file and Rack config file
+* An appropriate Gemfile to handle Heroku dependencies
+* Haml and Sass integration
+* ActiveRecord integration
+
+== Installation
+
+To install YourWay, you'll first need Ruby, RubyGems, and Git installed. Then, clone the repository with:
+
+  git clone git://github.com/gisikw/yourway.git
+
+Within the new directory, run the following command to resolve all other dependencies:
+
+  bundle
+
+Then, you can run your application locally with:
+
+  ruby app.rb
+
+You can view your site at http://localhost:4567
+
+== Copyright
+
+Copyright (c) 2012 Kevin W. Gisi. See MIT-LICENSE for details.

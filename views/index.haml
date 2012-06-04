@@ -1,0 +1,21 @@
+!!!5
+%html
+  %head
+    %title YourWay
+    %link{:href=>"/style.css",:type=>"text/css",:rel=>"stylesheet"}
+    %link{:ref=>"shortcut icon",:href=>"favicon.ico"}
+  %body
+    %section
+      %header
+        %h1 YourWay
+        %h2 A vanilla Sinatra application
+      %article
+        %pre=@readme
+      %footer
+        Copyright &copy;
+        =Date.today.year
+        &mdash;
+        %a{:href=>"http://kevingisi.com"} Kevin W. Gisi
+        | view the
+        %a{:href=>"http://github.com/gisikw/yourway"} source code
+        on GitHub
