@@ -4,6 +4,8 @@
     %title YourWay
     %link{:href=>"/style.css",:type=>"text/css",:rel=>"stylesheet"}
     %link{:ref=>"shortcut icon",:href=>"favicon.ico"}
+    %script{:src =>"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    %script{:src =>"/application.js"}
   %body
     %section
       %header
@@ -11,6 +13,26 @@
         %h2 A vanilla Sinatra application
       %article
         %pre=@readme
+      %article
+        %h2 Files in the top directory
+        %ul
+          -for file in @files
+            %li=file
+      %article
+        %h2 Testimonials
+        %ul#testimonials
+          -for comment in @comments
+            %li
+              %strong
+                =comment.name
+                says:
+              =comment.body
+      %article
+        %h2 Leave a comment!
+        %form{:action => '/comments', :method => 'POST'}
+          %input{:name => 'name', :placeholder => "Your name"}
+          %input{:name => 'body', :placeholder => "A brief message"}
+          %input{:type=>'submit'}
       %footer
         Copyright &copy;
         =Date.today.year
