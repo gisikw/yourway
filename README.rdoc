@@ -26,6 +26,14 @@ Then, you can run your application locally with:
 
 You can view your site at http://localhost:4567
 
+== Deploying to Heroku
+
+You can deploy your application to the cloud in a few easy steps:
+* Sign up for an account with heroku.com
+* gem install heroku
+* heroku create <appname>
+* git push heroku master
+
 == Copyright
 
 Copyright (c) 2012 Kevin W. Gisi. See MIT-LICENSE for details.
