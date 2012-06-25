@@ -1,9 +1,11 @@
 require 'rubygems'
 require 'bundler'
 
-require 'sqlite3/sqlite3_native' # This line shouldn't be here, but
-                                 # sqlite3 crashes without it, due to
-                                 # a missing method. (database.rb:293)
+configure :development do
+  require 'sqlite3/sqlite3_native' # This line shouldn't be here, but
+                                   # sqlite3 crashes without it, due to
+                                   # a missing method. (database.rb:293)
+end
 
 Bundler.require
 
